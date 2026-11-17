@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#17120f">
+  <title>Шаурма на районе</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <div><div class="eyebrow">ТВОЙ БИЗНЕС</div><h1>🌯 Шаурма на районе</h1></div>
+      <div class="level">УРОВЕНЬ <b id="level">1</b></div>
+    </header>
+    <section class="stats">
+      <div class="stat"><span>💵 Деньги</span><b id="money">250 ₽</b></div>
+      <div class="stat"><span>⭐ Репутация</span><b id="rep">0</b></div>
+      <div class="stat"><span>🧑‍🍳 Заказы</span><b id="served">0</b></div>
+    </section>
+    <section class="stall card">
+      <div class="stall-head"><div><span class="eyebrow">СЕГОДНЯ · ДЕНЬ 1</span><h2>Точка у метро</h2></div><span class="open-pill">● ОТКРЫТО</span></div>
+      <div class="stall-art">🏪<div class="awning">ШАУРМА  •  КОФЕ  •  СОУСЫ</div><div class="counter">🥙　🔥　🥤</div></div>
+      <div class="weather" id="weather">☀️ На улице хорошая погода. Люди идут к метро.</div>
+    </section>
+    <section class="card order-card">
+      <div class="section-row"><div><span class="eyebrow">ТЕКУЩИЙ ПОСЕТИТЕЛЬ</span><h2 id="customer">Посетитель ждёт</h2></div><div class="patience"><span>Терпение</span><b id="patience">100%</b></div></div>
+      <div class="customer-line"><div class="avatar" id="avatar">🧔</div><div><b id="orderTitle">Обычная шаурма</b><p id="orderDesc">Лаваш, курица, овощи, соус</p></div></div>
+      <div class="recipe">
+        <div class="recipe-title">СОБЕРИ ЗАКАЗ ВРУЧНУЮ</div>
+        <div class="ingredients" id="ingredients">
+          <button data-item="lavash">🫓<small>Лаваш</small></button>
+          <button data-item="meat">🍗<small>Курица</small></button>
+          <button data-item="veg">🥬<small>Овощи</small></button>
+          <button data-item="sauce">🥫<small>Соус</small></button>
+          <button data-item="wrap">🌯<small>Завернуть</small></button>
+        </div>
+        <div class="progress"><div id="progressFill"></div></div>
+        <div class="recipe-status" id="recipeStatus">Выбери ингредиенты по порядку рецепта.</div>
+        <button class="primary" id="serve" disabled>Выдать заказ</button>
+      </div>
+      <div class="feedback" id="feedback" aria-live="polite"></div>
+    </section>
+    <section class="bottom-grid">
+      <div class="card mini"><span class="eyebrow">ЗАПАСЫ</span><b>🫓 Лаваш <i>12</i></b><b>🍗 Курица <i>10</i></b><b>🥬 Овощи <i>14</i></b></div>
+      <div class="card mini"><span class="eyebrow">СОВЕТ ДНЯ</span><p id="tip">Не заставляй клиента ждать — терпение не бесконечно!</p></div>
+    </section>
+    <footer>Версия прототипа 0.1 · Прогресс пока хранится на этом устройстве</footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
